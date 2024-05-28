@@ -60,7 +60,6 @@ class TaskItem(Draggable):
                     padding=padding.only(right=-10),
                     border_radius=border_radius.all(3)
                 )], alignment=MainAxisAlignment.SPACE_BETWEEN),
-            #border=border.all(1, colors.ON_PRIMARY_CONTAINER),
             border_radius=border_radius.all(5),
             padding=padding.all(10),
             width=250,
@@ -158,17 +157,17 @@ class StatusColumn(DragTarget):
                                         items=[
                                             PopupMenuItem(
                                                 content=Text(
-                                                    value="Удалить", style=TextThemeStyle.LABEL_MEDIUM,
-                                                    text_align=TextAlign.CENTER
-                                                ),
-                                                on_click=self.delete,
-                                            ),
-                                            PopupMenuItem(
-                                                content=Text(
                                                     value="Переименовать", style=TextThemeStyle.LABEL_MEDIUM,
                                                     text_align=TextAlign.CENTER,
                                                 ),
                                                 on_click=self.set_name
+                                            ),
+                                            PopupMenuItem(
+                                                content=Text(
+                                                    value="Удалить", style=TextThemeStyle.LABEL_MEDIUM,
+                                                    text_align=TextAlign.CENTER
+                                                ),
+                                                on_click=self.delete,
                                             )
                                         ]
                                     ),
@@ -176,7 +175,6 @@ class StatusColumn(DragTarget):
                                 )
                             ],
                         ),
-                        #border=border.all(1, colors.BLACK38),
                         border_radius=border_radius.all(5),
                         bgcolor=colors.LIGHT_BLUE_500,
                         padding=padding.all(10),
