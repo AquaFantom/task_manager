@@ -30,7 +30,7 @@ def main(page: Page):
 
     page.title = "TaskManager"
     page.padding = 30
-    page.fonts = {"Comfortaa": "assets/fonts/Comfortaa-Regular.ttf",
+    page.fonts = {"Comfortaa": "assets/fonts/Comfortaa-Medium.ttf",
                   "Comfortaa_Bold": "assets/fonts/Comfortaa-Bold.ttf"}
     page.theme = ft.Theme(
         font_family="Comfortaa",
