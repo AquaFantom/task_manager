@@ -168,6 +168,13 @@ class StatusColumn(DragTarget):
                                                     text_align=TextAlign.CENTER
                                                 ),
                                                 on_click=self.delete,
+                                            ),
+                                            PopupMenuItem(
+                                                content=Text(
+                                                    value="Удалить все задачи", style=TextThemeStyle.LABEL_MEDIUM,
+                                                    text_align=TextAlign.CENTER
+                                                ),
+                                                on_click=self.clear
                                             )
                                         ]
                                     ),
@@ -267,6 +274,11 @@ class StatusColumn(DragTarget):
         parent: Row = self.parent
         parent.controls.remove(self)
         self.page.update()
+
+    def clear(self, e):
+        count = len(self.task_ref.current.controls)
+        for i in range(count):
+            self.task_ref.current.controls[0].delete()
 
     def add_task(self, e):
         def close_dlg(e):
