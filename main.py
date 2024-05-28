@@ -22,7 +22,7 @@ def main(page: Page):
             controller = Board(troute.name)
 
         if controller is None:
-            page.controls = []
+            page.route = "/not_found"
         else:
             page.controls = [controller]
         page.update()
