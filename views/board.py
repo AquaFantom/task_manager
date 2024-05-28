@@ -304,7 +304,7 @@ class StatusColumn(DragTarget):
             text="Создать", bgcolor=colors.BLUE_200, on_click=close_dlg, disabled=True
         )
         dialog = ft.AlertDialog(
-            title=Text("Введите задачу!"),
+            title=Text("Введите название"),
             content=Column(
                 [
                     dialog_text,
