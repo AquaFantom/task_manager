@@ -26,12 +26,13 @@ def main(page: Page):
         else:
             page.controls = [controller]
         page.update()
-    page.appbar = CustomAppBar(page.drawer)
+    page.appbar = CustomAppBar(page)
 
     page.title = "TaskManager"
     page.padding = 30
     page.fonts = {"Comfortaa": "assets/fonts/Comfortaa-Medium.ttf",
                   "Comfortaa_Bold": "assets/fonts/Comfortaa-Bold.ttf"}
+    page.theme_mode = ft.ThemeMode.SYSTEM
     page.theme = ft.Theme(
         font_family="Comfortaa",
         color_scheme=ft.ColorScheme(

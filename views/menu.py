@@ -7,16 +7,17 @@ from flet import (
     IconButton,
     NavigationDrawer
 )
+from flet_core import Page
 from flet_core.control_event import ControlEvent
 
 
 class CustomAppBar(AppBar):
-    def __init__(self, drawer: NavigationDrawer):
-        self.drawer = drawer
+    def __init__(self, page: Page):
+        self.drawer = page.drawer
         super().__init__()
 
         self.leading = IconButton(
-            icons.DARK_MODE,
+            icon=icons.DARK_MODE if page.platform_brightness == ft.Brightness.DARK else ft.icons.LIGHT_MODE,
             icon_color=colors.WHITE,
             icon_size=30,
             on_click=self.move_theme
