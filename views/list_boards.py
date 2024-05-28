@@ -32,7 +32,7 @@ class BoardItem(Container):
             content=Row(
                 controls=[
                     Container(
-                        content=Text(ref=self._name_ref),
+                        content=Text(ref=self._name_ref, color=colors.BLACK),
                         data='',
                         expand=True,
                         on_click=self.go_to_board

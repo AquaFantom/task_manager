@@ -37,7 +37,7 @@ class TaskItem(Draggable):
             bgcolor=colors.LIGHT_BLUE_50,
             content=Row([
                 Container(
-                    content=Text(value=self._task_name, ref=self._task_name_ref), data='', expand=True, on_click=''),
+                    content=Text(value=self._task_name, ref=self._task_name_ref, color=colors.BLACK), data='', expand=True, on_click=''),
                 Container(
                     content=PopupMenuButton(  # контейнер с кнопкой всплывающего меню
                         items=[
@@ -60,7 +60,7 @@ class TaskItem(Draggable):
                     padding=padding.only(right=-10),
                     border_radius=border_radius.all(3)
                 )], alignment=MainAxisAlignment.SPACE_BETWEEN),
-            border=border.all(1, colors.ON_PRIMARY_CONTAINER),
+            #border=border.all(1, colors.ON_PRIMARY_CONTAINER),
             border_radius=border_radius.all(5),
             padding=padding.all(10),
             width=250,
@@ -141,13 +141,14 @@ class StatusColumn(DragTarget):
         self.task_ref = ft.Ref[Column]()
         self.content = Container(
             bgcolor=colors.BLUE_200,
+            border_radius=border_radius.all(5),
             content=Column(
                 controls=[
                     Container(
                         content=Row(
                             controls=[
                                 Container(
-                                    content=Text(ref=self._status_name_ref), data='', expand=True, on_click=''
+                                    content=Text(ref=self._status_name_ref, color=colors.BLACK), data='', expand=True, on_click=''
                                 ),
                                 ft.IconButton(
                                     icon=ft.icons.ADD, on_click=self.add_task
@@ -175,7 +176,8 @@ class StatusColumn(DragTarget):
                                 )
                             ],
                         ),
-                        border=border.all(1, colors.BLACK38),
+                        #border=border.all(1, colors.BLACK38),
+                        border_radius=border_radius.all(5),
                         bgcolor=colors.LIGHT_BLUE_500,
                         padding=padding.all(10),
                         width=250,
