@@ -372,8 +372,9 @@ class Board(Column):
                 Row(
                     controls=self.columns,
                     vertical_alignment=ft.CrossAxisAlignment.START,
-                    alignment=ft.MainAxisAlignment.START
-                ),
+                    alignment=ft.MainAxisAlignment.START,
+                    scroll=ft.ScrollMode.AUTO
+                )
             )
         ]
         self.load_data()
