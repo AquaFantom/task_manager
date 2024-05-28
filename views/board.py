@@ -344,8 +344,8 @@ class Board(Column):
                             style=ButtonStyle(
                                 color=colors.WHITE,
                                 bgcolor={
-                                    "": colors.BLUE_200,
-                                    "hovered": colors.BLUE_400
+                                    "": colors.LIGHT_BLUE_500,
+                                    "hovered": colors.LIGHT_BLUE_600
                                 },
                                 shape={
                                     "": RoundedRectangleBorder(radius=3)
