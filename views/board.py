@@ -250,7 +250,7 @@ class StatusColumn(DragTarget):
             text="Изменить", bgcolor=colors.BLUE_200, on_click=close_dlg, disabled=True
         )
         dialog = ft.AlertDialog(
-            title=Text("Введите название!"),
+            title=Text("Введите название задачи"),
             content=Column(
                 [
                     dialog_text,
@@ -343,7 +343,7 @@ class Board(Column):
                 vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                 controls=[
-                    ft.TextButton("К доскам", icon=ft.icons.ARROW_BACK, on_click=self.go_to_boards),
+                    ft.TextButton("К доскам", icon=ft.icons.ARROW_BACK, on_click=self.go_to_boards, style=ButtonStyle(color=colors.BLUE_GREY_400)),
                     Container(
                         Text(value=self._board_name, style=TextThemeStyle.HEADLINE_MEDIUM, ref=self._board_name_ref),
                         padding=padding.only(top=15)

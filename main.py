@@ -32,6 +32,12 @@ def main(page: Page):
     page.padding = 30
     page.fonts = {"Comfortaa": "assets/fonts/Comfortaa-Regular.ttf",
                   "Comfortaa_Bold": "assets/fonts/Comfortaa-Bold.ttf"}
+    page.theme = ft.Theme(
+        font_family="Comfortaa",
+        color_scheme=ft.ColorScheme(
+            primary=ft.colors.BLUE_GREY_700
+        )
+    )
     page.on_route_change = change_route
     page.route = '/boards'
     page.update()

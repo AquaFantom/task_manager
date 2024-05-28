@@ -64,7 +64,7 @@ class BoardItem(Container):
             ),
             border=border.all(1, colors.BLACK38),
             border_radius=border_radius.all(5),
-            bgcolor=colors.WHITE60 if self.page.theme_mode == ft.ThemeMode.LIGHT else colors.LIGHT_BLUE_50,
+            bgcolor=colors.WHITE60,
             padding=padding.all(10),
             width=250,
             data='',
